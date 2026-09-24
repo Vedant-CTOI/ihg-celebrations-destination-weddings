@@ -1,0 +1,17 @@
+{
+  "name": "ihg-celebrations-india-destination-weddings",
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev-frontend": "npm run dev --prefix frontend",
+    "dev-backend": "npm run dev --prefix backend",
+    "dev": "concurrently \"npm run dev-frontend\" \"npm run dev-backend\"",
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node backend/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "concurrently": "latest"
+  }
+}
